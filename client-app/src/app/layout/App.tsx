@@ -31,6 +31,7 @@ function App() {
   function handleFormOpen(id?: string) {
     id ? handleSelectActivity(id) : handleCancelSelectActivity();
     setEditMode(true);
+    console.log('Testing')
   }
 
   function handleFormClose() {
