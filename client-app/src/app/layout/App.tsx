@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "./styles.css";
-import { Container } from "semantic-ui-react";
+import { Button, Container } from "semantic-ui-react";
 import { NavBar } from "./NavBar";
 import LoadingComponent from "./LoadingComponent";
 import ActivityDashboard from "../../features/activities/dashboard/ActivityDashboard";
@@ -21,6 +21,7 @@ function App() {
     <>
       <NavBar />
       <Container style={{ marginTop: "7em" }}>
+        <Button content='Chang my color' onClick={() => activityStore.setOrgcolors("yellow")} />
         <ActivityDashboard />
       </Container>
     </>

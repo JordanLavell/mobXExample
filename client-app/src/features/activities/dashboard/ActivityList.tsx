@@ -6,7 +6,7 @@ import { useStore } from '../../../app/stores/store';
 
 export default observer(function ActivityList() {
     const { activityStore } = useStore();
-    const { deleteActivity, activitiesByDate, loading } = activityStore;
+    const { deleteActivity, activitiesByDate, loading, buttonColor } = activityStore;
     const [target, setTarget] = useState('');
 
     function handleActivityDelete(e: SyntheticEvent<HTMLButtonElement>, id: string) {
@@ -34,7 +34,7 @@ export default observer(function ActivityList() {
                                     onClick={(e) => handleActivityDelete(e, activity.id)}
                                     floated='right'
                                     content='Delete'
-                                    color='red' />
+                                    color={buttonColor} />
                                 <Label basic content={activity.category} />
                             </Item.Extra>
                         </Item.Content>
